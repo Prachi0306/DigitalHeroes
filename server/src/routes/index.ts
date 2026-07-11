@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { ApiResponse } from '../utils/api-response.js';
 import authRoutes from './auth.routes.js';
 import jobRoutes from './job.routes.js';
+import candidateRoutes from './candidate.routes.js';
 
 const router = Router();
 
@@ -15,6 +16,9 @@ router.use('/auth', authRoutes);
 
 // Jobs Routes
 router.use('/jobs', jobRoutes);
+
+// Candidates Routes
+router.use('/candidates', candidateRoutes);
 
 // Placeholders for future endpoints
 // router.use('/users', usersRoutes);
